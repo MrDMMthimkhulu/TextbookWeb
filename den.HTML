@@ -72,12 +72,19 @@
             cursor: pointer;
             margin-top: 10px;
         }
-             .grid-container {
-                grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
-                width: 90%;
+        @media (min-width: 1025px) {
+            .grid-container {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust for larger screens */
             }
-            .book-item {
-                padding: 20px;
+        }
+        @media (max-width: 1024px) {
+            .grid-container {
+                grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+            }
+        }
+        @media (max-width: 768px) {
+            .grid-container {
+                grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
             }
         }
     </style>
