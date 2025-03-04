@@ -91,6 +91,82 @@
         grid-template-columns: repeat(2, 1fr); /* 2 items per row on small screens */
     }
 }
+
+/* The following styles are for the reviews section */
+
+.reviews-section {
+            width: 60%; /* Reduced width */
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 40px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .reviews-list {
+            margin-bottom: 20px;
+        }
+
+        .review-item {
+            background-color: #fafafa;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        .review-rating {
+            color: gold;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            margin: 0 auto;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .extra-reviews {
+            display: none;
+        }
+
+        button:focus {
+            outline: none;
+        }
+
+        .reviewer-info {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .reviewer-info strong {
+            font-weight: bold;
+            color: black;
+        }
+
+        .reviewer-info p {
+            font-style: italic;
+            color: #595959; /* Faded black */
+        }
+
+        .review-text {
+            color: #595959; /* Faded black */
+        }
+
+/* End of reviews section styles */
+
     </style>
 </head>
 <body>
@@ -130,6 +206,229 @@
         <div class="book-item"><img src="28.png" alt="Discrete Mathematics with Applications"><p>Discrete mathematics with applications  (FiFth editiON, metric Version)</p><button class="subscribe-btn">Subscribe</button></div>
         <div class="book-item"><img src="29.png" alt="Foundations of computer science"><p>Foundations of Computer Science 4th Edition</p><button class="subscribe-btn">Subscribe</button></div>
     </div>
+
+    <div class="reviews-section">
+        <h2>User Reviews</h2>
+        
+        <!-- Reviews Display -->
+        <div class="reviews-list">
+            <!-- Review 1 -->
+            <div class="review-item">
+                <div class="reviewer-info">
+                    <strong>Eric - 07 Jan 2025 (Reviewed 3 days after subscription)</strong>
+                    <p>University of Pretoria (UP)</p>
+                </div>
+                <div class="review-rating">★★★★★</div>
+                <div class="review-text">"Noisy when running and WiFi connection is unstable which makes it very hard to download images to the unit. Not a good option if people need to get close or in quiet areas."</div>
+            </div>
+
+            <!-- Review 2 -->
+            <div class="review-item">
+                <div class="reviewer-info">
+                    <strong>Sam - 19 Dec 2024 (Reviewed 3 days after subscription)</strong>
+                    <p>University of Pretoria (UP)</p>
+                </div>
+                <div class="review-rating">★★★★☆</div>
+                <div class="review-text">"Psychopathology: An Integrative Approach is an insightful read, but the chapters can sometimes feel dense. Still a great resource for anyone studying mental disorders."</div>
+            </div>
+
+            <!-- Review 3 -->
+            <div class="review-item">
+                <div class="reviewer-info">
+                    <strong>Anna - 18 Dec 2024 (Reviewed 3 days after subscription)</strong>
+                    <p>University of Pretoria (UP)</p>
+                </div>
+                <div class="review-rating">★★★★★</div>
+                <div class="review-text">"Calculus: Early Transcendentals is an excellent textbook! It breaks down concepts into digestible parts with great examples. Highly recommended for students." </div>
+            </div>
+
+            <!-- Review 4 -->
+            <div class="review-item">
+                <div class="reviewer-info">
+                    <strong>Jason - 17 Dec 2024 (Reviewed 3 days after subscription)</strong>
+                    <p>University of Johannesburg (UJ)</p>
+                </div>
+                <div class="review-rating">★★★☆☆</div>
+                <div class="review-text">"Auditing Notes for South African Students is good for revision, but the layout could be more organized to improve readability." </div>
+            </div>
+
+            <!-- Review 5 -->
+            <div class="review-item">
+                <div class="reviewer-info">
+                    <strong>Peter - 16 Dec 2024 (Reviewed 3 days after subscription)</strong>
+                    <p>University of Mpumalanga (UMP)</p>
+                </div>
+                <div class="review-rating">★★★★★</div>
+                <div class="review-text">"Business Information Systems offers a great overview of the subject. The case studies included are very helpful for understanding real-world applications." </div>
+            </div>
+
+            <!-- Review 6 -->
+            <div class="review-item">
+                <div class="reviewer-info">
+                    <strong>Tom - 01 Jan 2025 (Reviewed 3 days after subscription)</strong>
+                    <p>University of Mpumalanga (UMP)</p>
+                </div>
+                <div class="review-rating">★★★★☆</div>
+                <div class="review-text">"Calculus: Early Transcendentals was a bit difficult to understand at first, but once you get into it, the explanations are thorough and very helpful. A great textbook for anyone diving into calculus!"</div>
+            </div>
+
+            <!-- Review 7 -->
+            <div class="review-item">
+                <div class="reviewer-info">
+                    <strong>Jessica - 30 Dec 2024 (Reviewed 3 days after subscription)</strong>
+                    <p>University of the Witwatersrand (WITS)</p>
+                </div>
+                <div class="review-rating">★★★★★</div>
+                <div class="review-text">"Child Psychopathology 8th Edition is an exceptional textbook! It is very well-structured, and the case studies add a practical dimension that helps with understanding complex theories."</div>
+            </div>
+
+            <!-- Review 8 -->
+            <div class="review-item">
+                <div class="reviewer-info">
+                    <strong>David - 29 Dec 2024 (Reviewed 3 days after subscription)</strong>
+                    <p>University of Johannesburg (UJ)</p>
+                </div>
+                <div class="review-rating">★★★☆☆</div>
+                <div class="review-text">"Commercial Law (Paperback, 6th Edition) provides a good introduction to the subject, but I feel some sections could be more detailed. Overall, it serves its purpose."</div>
+            </div>
+
+            <!-- Review 9 -->
+            <div class="review-item">
+                <div class="reviewer-info">
+                    <strong>Emily - 28 Dec 2024 (Reviewed 3 days after subscription)</strong>
+                    <p>University of Pretoria (UP)</p>
+                </div>
+                <div class="review-rating">★★★★★</div>
+                <div class="review-text">"Introductory Mathematical Analysis for Business, Economics, and the Life and Social Sciences is a must-have for anyone studying economics. The examples and exercises are highly relevant and easy to follow."</div>
+            </div>
+
+            <!-- Review 10 -->
+            <div class="review-item">
+                <div class="reviewer-info">
+                    <strong>Simon - 27 Dec 2024 (Reviewed 3 days after subscription)</strong>
+                    <p>University of Mpumalanga (UMP)</p>
+                </div>
+                <div class="review-rating">★★★★★</div>
+                <div class="review-text">"Essentials of Modern Business Statistics with Microsoft Excel helped me tremendously with understanding statistics concepts. The integration with Excel was especially helpful for applying the methods in real life."</div>
+            </div>
+
+            <!-- Review 11 -->
+            <div class="review-item">
+                <div class="reviewer-info">
+                    <strong>Lisa - 26 Dec 2024 (Reviewed 3 days after subscription)</strong>
+                    <p>University of the Witwatersrand (WITS)</p>
+                </div>
+                <div class="review-rating">★★★★☆</div>
+                <div class="review-text">"INTERNAL AUDITING: AN INTRODUCTION (6TH ED) is a great resource for those new to auditing. The content is easy to read, but I would have liked more in-depth case studies for practical applications."</div>
+            </div>
+
+            <!-- Review 12 -->
+            <div class="review-item">
+                <div class="reviewer-info">
+                    <strong>John - 25 Dec 2024 (Reviewed 3 days after subscription)</strong>
+                    <p>University of Johannesburg (UJ)</p>
+                </div>
+                <div class="review-rating">★★★★★</div>
+                <div class="review-text">"MODERN BUSINESS STATISTICS WITH MICROSOFT OFFICE EXCEL is an excellent resource! The real-life examples and easy-to-understand language made it easier for me to grasp the concepts."</div>
+            </div>
+
+            <!-- Review 13 -->
+            <div class="review-item">
+                <div class="reviewer-info">
+                    <strong>Rachel - 24 Dec 2024 (Reviewed 3 days after subscription)</strong>
+                    <p>University of Pretoria (UP)</p>
+                </div>
+                <div class="review-rating">★★★★☆</div>
+                <div class="review-text">"PERFORMING INTERNAL AUDIT ENGAGEMENTS is a very thorough book. It covers auditing techniques in-depth but could use more examples from real-world audit engagements."</div>
+            </div>
+
+            <!-- Review 14 -->
+            <div class="review-item">
+                <div class="reviewer-info">
+                    <strong>Mark - 23 Dec 2024 (Reviewed 3 days after subscription)</strong>
+                    <p>University of Mpumalanga (UMP)</p>
+                </div>
+                <div class="review-rating">★★★★☆</div>
+                <div class="review-text">"Principles of Business Information Systems is a great introduction to the subject. The concepts are explained in detail, though some sections could be a bit more user-friendly for beginners."</div>
+            </div>
+
+            <!-- Review 15 -->
+            <div class="review-item">
+                <div class="reviewer-info">
+                    <strong>Olivia - 22 Dec 2024 (Reviewed 3 days after subscription)</strong>
+                    <p>University of the Witwatersrand (WITS)</p>
+                </div>
+                <div class="review-rating">★★★★★</div>
+                <div class="review-text">"Management 14th Edition provides exceptional insight into organizational management. The real-life case studies bring the material to life."</div>
+            </div>
+
+            <!-- Review 16 -->
+            <div class="review-item">
+                <div class="reviewer-info">
+                    <strong>Chris - 21 Dec 2024 (Reviewed 3 days after subscription)</strong>
+                    <p>University of Johannesburg (UJ)</p>
+                </div>
+                <div class="review-rating">★★★★★</div>
+                <div class="review-text">"SOCIAL PSYCHOLOGY - SOUTH AFRICAN EDITION covers all the relevant topics in social psychology. I really appreciated the South African context in the case studies and examples."</div>
+            </div>
+
+            <!-- Review 17 -->
+            <div class="review-item">
+                <div class="reviewer-info">
+                    <strong>Daniel - 20 Dec 2024 (Reviewed 3 days after subscription)</strong>
+                    <p>University of Pretoria (UP)</p>
+                </div>
+                <div class="review-rating">★★★★☆</div>
+                <div class="review-text">"POLITICS (PAPERBACK, 5TH ED. 2019) is a great read! It offers in-depth coverage of political theories and practices, but some sections could use more current examples."</div>
+            </div>
+
+            <!-- Review 18 -->
+            <div class="review-item">
+                <div class="reviewer-info">
+                    <strong>Sam - 19 Dec 2024 (Reviewed 3 days after subscription)</strong>
+                    <p>University of Mpumalanga (UMP)</p>
+                </div>
+                <div class="review-rating">★★★★★</div>
+                <div class="review-text">"Community Psychology South African praxis offers a unique perspective. It delves deep into community-based psychology, and the examples are very relevant to South African society."</div>
+            </div>
+
+            <!-- Review 19 -->
+            <div class="review-item">
+                <div class="reviewer-info">
+                    <strong>Anna - 18 Dec 2024 (Reviewed 3 days after subscription)</strong>
+                    <p>University of the Witwatersrand (WITS)</p>
+                </div>
+                <div class="review-rating">★★★★★</div>
+                <div class="review-text">"Child and Adolescent Development 3rd Ed is the perfect textbook for understanding the stages of development in children and adolescents. It's easy to read and well-researched."</div>
+            </div>
+
+            <!-- Review 20 -->
+            <div class="review-item">
+                <div class="reviewer-info">
+                    <strong>Jason - 17 Dec 2024 (Reviewed 3 days after subscription)</strong>
+                    <p>University of Johannesburg (UJ)</p>
+                </div>
+                <div class="review-rating">★★★★☆</div>
+                <div class="review-text">"CHEMISTRY & CHEMICAL REACTIVITY (10TH EDITION) is comprehensive and clear, but the diagrams could be more detailed for better understanding. It's still a great resource for students."</div>
+            </div>
+
+            <!-- Review 21 -->
+            <div class="review-item">
+                <div class="reviewer-info">
+                    <strong>Peter - 16 Dec 2024 (Reviewed 3 days after subscription)</strong>
+                    <p>University of Pretoria (UP)</p>
+                </div>
+                <div class="review-rating">★★★★★</div>
+                <div class="review-text">"Global Politics - Andrew Heywood offers a thorough understanding of international politics. It's an easy-to-read book, ideal for students new to the subject."</div>
+            </div>
+        </div>
+
+        <!-- Button to show more reviews -->
+        <button id="showMoreReviewsBtn">Show More Reviews</button>
+    </div>
+
+    <script src="script.js"></script>
+
     <script>
         function filterSearch() {
             let input = document.getElementById('searchBar').value.toLowerCase();
@@ -143,6 +442,48 @@
                 }
             });
         }
+
+
+/*The following script is for the reviews section*/
+
+
+
+        let currentReviews = 1;
+        const reviews = document.querySelectorAll('.review-item');
+        const showMoreBtn = document.getElementById('showMoreReviewsBtn');
+
+        function displayReviews() {
+            for (let i = 0; i < reviews.length; i++) {
+                if (i < currentReviews) {
+                    reviews[i].style.display = 'block';
+                } else {
+                    reviews[i].style.display = 'none';
+                }
+            }
+
+            if (currentReviews === reviews.length) {
+                showMoreBtn.textContent = 'Show Less Reviews';
+            } else {
+                showMoreBtn.textContent = 'Show More Reviews';
+            }
+        }
+
+        showMoreBtn.addEventListener('click', () => {
+            if (currentReviews === reviews.length) {
+                currentReviews = 1;
+            } else {
+                currentReviews = (currentReviews + 30) <= reviews.length ? currentReviews + 30 : reviews.length;
+            }
+            displayReviews();
+        });
+
+        // Initially display first 3 reviews
+        displayReviews();
+
+
+/*End of reviews section script*/
+
+
     </script>
 </body>
 </html>
