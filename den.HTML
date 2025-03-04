@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Web - Find Your Textbooks</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        header {
+            background-color: #fff;
+            width: 100%;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: 500;
+            color: #333;
+        }
+        #search-container {
+            margin: 20px 0;
+            width: 80%;
+            max-width: 600px;
+        }
+        #searchBar {
+            width: 100%;
+            padding: 15px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            width: 80%;
+            max-width: 1200px;
+        }
+        .book-item {
+            background-color: #fff;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            text-align: center;
+        }
+        .book-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        .subscribe-btn {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Book Web - Search and Subscribe for Textbooks</h1>
+    </header>
+    <div id="search-container">
+        <input type="text" id="searchBar" onkeyup="filterSearch()" placeholder="Search for textbooks...">
+    </div>
+    <div class="grid-container" id="itemList">
+        <div class="book-item"><img src="1.png" alt="Psychopathology"><p>Psychopathology: An Integrative Approach to Mental Disorders | 9th Edition</p><button class="subscribe-btn">Subscribe</button></div>
+        <div class="book-item"><img src="2.png" alt="Financial Accounting"><p>Fundamentals of Financial Accounting 5th Ed</p><button class="subscribe-btn">Subscribe</button></div>
+        <div class="book-item"><img src="3.png" alt="Accounting"><p>An Introduction to Accounting: Accountability in Organisations and Society</p><button class="subscribe-btn">Subscribe</button></div>
+        <div class="book-item"><img src="4.png" alt="Auditing Notes"><p>AUDITING NOTES FOR SOUTH AFRICAN STUDENTS (PAPERBACK, 12TH EDITION)</p><button class="subscribe-btn">Subscribe</button></div>
+        <div class="book-item"><img src="5.png" alt="Business Law"><p>Business Law 6th Edition by Nagel et al</p><button class="subscribe-btn">Subscribe</button></div>
+        <div class="book-item"><img src="6.png" alt="Calculus"><p>Calculus: Early Transcendentals</p><button class="subscribe-btn">Subscribe</button></div>
+        <div class="book-item"><img src="7.png" alt="Child Psychopathology"><p>Child Psychopathology 8th Edition</p><button class="subscribe-btn">Subscribe</button></div>
+        <div class="book-item"><img src="8.png" alt="Commercial Law"><p>Commercial Law (Paperback, 6th Edition)</p><button class="subscribe-btn">Subscribe</button></div>
+        <div class="book-item"><img src="9.png" alt="Mathematical Analysis"><p>Introductory Mathematical Analysis for Business, Economics, and the Life and Social Sciences</p><button class="subscribe-btn">Subscribe</button></div>
+        <div class="book-item"><img src="10.png" alt="Business Statistics"><p>Essentials of Modern Business Statistics with Microsoft Excel</p><button class="subscribe-btn">Subscribe</button></div>
+        <div class="book-item"><img src="11.png" alt="Internal Auditing"><p>INTERNAL AUDITING: AN INTRODUCTION (6TH ED)</p><button class="subscribe-btn">Subscribe</button></div>
+        <div class="book-item"><img src="12.png" alt="Modern Business Statistics"><p>MODERN BUSINESS STATISTICS WITH MICROSOFT OFFICE EXCEL</p><button class="subscribe-btn">Subscribe</button></div>
+        <div class="book-item"><img src="13.png" alt="Internal Audit Engagements"><p>PERFORMING INTERNAL AUDIT ENGAGEMENTS</p><button class="subscribe-btn">Subscribe</button></div>
+        <div class="book-item"><img src="14.png" alt="Business Information Systems"><p>Principles of Business Information Systems</p><button class="subscribe-btn">Subscribe</button></div>
+        <div class="book-item"><img src="15.png" alt="Management"><p>Management 14th Edition</p><button class="subscribe-btn">Subscribe</button></div>
+        <div class="book-item"><img src="16.png" alt="Social Psychology"><p>SOCIAL PSYCHOLOGY - SOUTH AFRICAN EDITION</p><button class="subscribe-btn">Subscribe</button></div>
+        <div class="book-item"><img src="18.png" alt="Politics"><p>POLITICS (PAPERBACK, 5TH ED. 2019)</p><button class="subscribe-btn">Subscribe</button></div>
+        <div class="book-item"><img src="19.png" alt="Community Psychology South African praxis"><p>Community Psychology South African praxis</p><button class="subscribe-btn">Subscribe</button></div>
+        <div class="book-item"><img src="20.png" alt="Child and Adolescent Development"><p>Child and Adolescent Development 3rd Ed</p><button class="subscribe-btn">Subscribe</button></div>  
+        <div class="book-item"><img src="21.png" alt="CHEMISTRY & CHEMICAL REACTIVITY"><p>CHEMISTRY & CHEMICAL REACTIVITY (10TH EDITION)</p><button class="subscribe-btn">Subscribe</button></div>
+        <div class="book-item"><img src="22.png" alt="Politics"><p>Key Concepts in Politics and International Relations -- Heywood, Andrew</p><button class="subscribe-btn">Subscribe</button></div>
+        <div class="book-item"><img src="23.png" alt="Politics"><p>Global Politics - Andrew Heywood</p><button class="subscribe-btn">Subscribe</button></div>
+        <div class="book-item"><img src="24.png" alt="Intermediate English Grammar"><p>Collins COBUILD Intermediate English Grammar and Practice</p><button class="subscribe-btn">Subscribe</button></div>
+        <div class="book-item"><img src="25.png" alt="Human Development"><p>Human Development for students in Southern Africa</p><button class="subscribe-btn">Subscribe</button></div>
+        <div class="book-item"><img src="26.png" alt="Criminology"><p>A Southern African Perspective On Fundamental Criminology</p><button class="subscribe-btn">Subscribe</button></div>
+        <div class="book-item"><img src="27.png" alt="Discrete Mathematics with Applications"><p>Discrete Mathematics with Applications, 5th Edition</p><button class="subscribe-btn">Subscribe</button></div>
+        <div class="book-item"><img src="28.png" alt="Discrete Mathematics with Applications"><p>Discrete mathematics with applications  (FiFth editiON, metric Version)</p><button class="subscribe-btn">Subscribe</button></div>
+        <div class="book-item"><img src="29.png" alt="Foundations of computer science"><p>Foundations of Computer Science 4th Edition</p><button class="subscribe-btn">Subscribe</button></div>
+    </div>
+    <script>
+        function filterSearch() {
+            let input = document.getElementById('searchBar').value.toLowerCase();
+            let items = document.querySelectorAll('.book-item');
+            
+            items.forEach(item => {
+                if (item.textContent.toLowerCase().includes(input)) {
+                    item.style.display = "block";
+                } else {
+                    item.style.display = "none";
+                }
+            });
+        }
+    </script>
+</body>
+</html>
