@@ -324,6 +324,35 @@ html, body {
     flex: 1; /* Pushes the footer down */
 }
 
+/* General Footer Styling */
+footer {
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Change from fixed to relative */
+    bottom: 0;
+}
+
+/* Ensure the whole page fills the screen properly */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Ensures the content pushes the footer down */
+.main-content {
+    flex: 1;
+}
+
 /* Footer Text */
 footer p {
     margin-bottom: 10px;
@@ -384,6 +413,7 @@ footer nav a:hover {
         font-size: 12px;
     }
 }
+
 
 
 
@@ -668,16 +698,15 @@ footer nav a:hover {
     <script src="script.js"></script>
 
 <footer>
-    <p>&copy; 2025 Textbooks Web | All Rights Reserved</p>
-
-    <nav>
-        <a href="Footer.html" style="color: white; margin-right: 15px">About Us</a>
-        <a href="Footer.html" style="color: white; margin-right: 15px">Terms of Service</a>
-        <a href="Footer.html" style="color: white; margin-right: 15px">Privacy Policy</a>
-        <a href="Footer.html" style="color: white; margin-right: 15px">Products & Services</a>
-        <a href="Footer.html#contact" style="color: white">Contact Us</a>
-    </nav>
-</footer>
+        <p>&copy; 2025 Textbook Web | All Rights Reserved</p>
+        <nav>
+            <a href="Footer.html">About Us</a>
+            <a href="Footer.html">Terms of Service</a>
+            <a href="Footer.html">Privacy Policy</a>
+            <a href="Footer.html">Products & Services</a>
+            <a href="Footer.html#contact">Contact Us</a>
+        </nav>
+    </footer>
 
 
 
