@@ -265,6 +265,20 @@ body {
 }
 
 /* Responsive Styles */
+/* General Page Styles */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content {
+    flex: 1; /* Pushes the footer down */
+}
+
+/* Responsive Styles */
 @media (max-width: 768px) {
     .intro-text {
         font-size: 16px;
@@ -272,6 +286,20 @@ body {
 
     .subscription {
         width: 95%;
+    }
+
+    footer {
+        padding: 15px 10px;
+    }
+
+    footer nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer nav a, footer p {
+        font-size: 12px;
+        margin: 5px 0;
     }
 }
 
@@ -295,7 +323,6 @@ body {
     }
 }
 
-
 /* Footer Styles */
 footer {
     background-color: #000000;
@@ -303,57 +330,13 @@ footer {
     text-align: center;
     padding: 20px 0;
     width: 100%;
-    position: relative;
-    bottom: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative; /* Ensures footer stays at bottom */
 }
 
-/* Make sure the footer does not shift up */
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-}
-
-.main-content {
-    flex: 1; /* Pushes the footer down */
-}
-
-/* General Footer Styling */
-footer {
-    background-color: #000000;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative; /* Change from fixed to relative */
-    bottom: 0;
-}
-
-/* Ensure the whole page fills the screen properly */
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-}
-
-/* Ensures the content pushes the footer down */
-.main-content {
-    flex: 1;
-}
-
-/* Footer Text */
 footer p {
     margin-bottom: 10px;
     font-size: 14px;
@@ -369,7 +352,7 @@ footer nav {
 footer nav a {
     color: white;
     text-decoration: none;
-    margin: 5px 10px; /* Spacing between links */
+    margin: 5px 10px;
     font-size: 14px;
 }
 
@@ -383,34 +366,9 @@ footer nav a:hover {
         padding: 18px 10px;
     }
 
-    footer nav {
-        justify-content: center;
-    }
-
     footer nav a {
         font-size: 13px;
         margin: 5px;
-    }
-}
-
-/* Responsive Footer for Smaller Screens (Phones) */
-@media (max-width: 768px) {
-    footer {
-        padding: 15px 10px;
-    }
-
-    footer nav {
-        flex-direction: column; /* Stack links on small screens */
-        align-items: center;
-    }
-
-    footer nav a {
-        margin: 5px 0; /* Add vertical spacing */
-        font-size: 12px;
-    }
-
-    footer p {
-        font-size: 12px;
     }
 }
 
