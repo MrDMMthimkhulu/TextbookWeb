@@ -51,10 +51,12 @@
 
         /* Pricing Section */
         .pricing-container {
-            width: 100%;
+            width: 80%; /* Make the container 80% of the screen width */
+            max-width: 1000px; /* Limit the max width */
             padding: 40px 20px;
             background-color: #f1f1f1;
             text-align: center;
+            margin: 0 auto; /* Center the container */
         }
 
         .pricing-container h2 {
@@ -182,6 +184,10 @@
 
             .about-section p {
                 font-size: 12px;
+            }
+
+            .pricing-container {
+                width: 90%; /* Make the pricing container a little smaller on small screens */
             }
 
             .pricing-container h2 {
