@@ -36,41 +36,57 @@
             font-weight: 500;
         }
 
-        /* Content Section */
 /* Content Section */
 .content {
     margin-top: 80px;
     width: 100%;
     text-align: center;
+    padding: 0 20px; /* Added padding for better spacing */
 }
 
 /* About Section */
 .about-section {
-    width: 100%;  /* Full width to fill the screen */
-    height: 100vh; /* Full viewport height */
-    padding: 20px;
+    width: 90%;
+    max-width: 800px; /* Increased max-width for larger screens like laptops */
+    margin: 0 auto;
+    padding: 40px 20px;
     background-color: #f9f9f9;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     text-align: center;
+    box-sizing: border-box; /* Ensures padding is included in the width */
+    border-radius: 8px; /* Slight rounded corners for better aesthetics */
 }
 
-/* Heading - Make it fill the screen */
 .about-section h2 {
-    font-size: 10vw;  /* Adjust this to scale the text */
+    font-size: 28px; /* Increased font size for better visibility */
     font-weight: 600;
     color: #333;
-    margin: 0;
+    margin-bottom: 20px;
 }
 
-/* Paragraph - Adjust size to be readable on the screen */
 .about-section p {
-    font-size: 2vw;  /* Adjust to make the text fill based on screen width */
+    font-size: 18px; /* Slightly larger font size for readability */
     color: #666;
-    line-height: 1.6;
-    margin-top: 20px;
+    line-height: 1.8; /* Increased line height for better spacing */
+    max-width: 700px; /* Optional: Restrict max-width for better readability */
+    margin: 0 auto; /* Center paragraph text */
 }
+
+/* Media Queries for Laptop Screens */
+@media (min-width: 768px) and (max-width: 1200px) {
+    .about-section {
+        padding: 50px 30px; /* Adjust padding for larger screens */
+    }
+
+    .about-section h2 {
+        font-size: 32px; /* Make the heading slightly larger on larger screens */
+    }
+
+    .about-section p {
+        font-size: 18px; /* Ensure the text size is still readable */
+        max-width: 800px; /* Increase the max-width to make use of larger screen width */
+    }
+}
+
 
 
         /* Pricing Section */
