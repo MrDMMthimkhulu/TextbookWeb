@@ -334,7 +334,23 @@ footer nav a:hover {
     text-decoration: underline;
 }
 
-/* Responsive Footer */
+/* Responsive Footer for Tablets */
+@media (max-width: 1024px) {
+    footer {
+        padding: 18px 10px;
+    }
+
+    footer nav {
+        justify-content: center;
+    }
+
+    footer nav a {
+        font-size: 13px;
+        margin: 5px;
+    }
+}
+
+/* Responsive Footer for Smaller Screens (Phones) */
 @media (max-width: 768px) {
     footer {
         padding: 15px 10px;
@@ -342,12 +358,19 @@ footer nav a:hover {
 
     footer nav {
         flex-direction: column; /* Stack links on small screens */
+        align-items: center;
     }
 
     footer nav a {
         margin: 5px 0; /* Add vertical spacing */
+        font-size: 12px;
+    }
+
+    footer p {
+        font-size: 12px;
     }
 }
+
 
 
     </style>
