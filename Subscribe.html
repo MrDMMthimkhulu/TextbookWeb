@@ -37,34 +37,41 @@
         }
 
         /* Content Section */
-        .content {
-            margin-top: 80px;
-            width: 100%;
-            text-align: center;
-        }
+/* Content Section */
+.content {
+    margin-top: 80px;
+    width: 100%;
+    text-align: center;
+}
 
-        /* About Section */
-        .about-section {
-            width: 90%;
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 40px 20px;
-            background-color: #f9f9f9;
-            text-align: center;
-        }
+/* About Section */
+.about-section {
+    width: 100%;  /* Full width to fill the screen */
+    height: 100vh; /* Full viewport height */
+    padding: 20px;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
 
-        .about-section h2 {
-            font-size: 26px;
-            font-weight: 600;
-            color: #333;
-            margin-bottom: 20px;
-        }
+/* Heading - Make it fill the screen */
+.about-section h2 {
+    font-size: 10vw;  /* Adjust this to scale the text */
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+}
 
-        .about-section p {
-            font-size: 16px;
-            color: #666;
-            line-height: 1.6;
-        }
+/* Paragraph - Adjust size to be readable on the screen */
+.about-section p {
+    font-size: 2vw;  /* Adjust to make the text fill based on screen width */
+    color: #666;
+    line-height: 1.6;
+    margin-top: 20px;
+}
+
 
         /* Pricing Section */
         .pricing-container {
