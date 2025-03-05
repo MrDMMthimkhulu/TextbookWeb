@@ -23,24 +23,34 @@
         }
 
         /* Header Styles */
-        header {
-            width: 100%;
-            padding: 20px;
-            background-color: #000000;
-            color: white;
-            text-align: center;
-            box-shadow: 0 2px 4px rgb(0, 0, 0);
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 999;
-        }
+/* Header Styles */
+header {
+    width: 100%;
+    padding: 15px 10px; /* Reduce padding for smaller screens */
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    box-shadow: 0 2px 4px rgb(0, 0, 0);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
 
-        header h1 {
-            margin: 0;
-            font-size: 24px;
-            font-weight: 500;
-        }
+/* Header Title */
+header h1 {
+    margin: 0;
+    font-size: 20px; /* Smaller font for mobile */
+    font-weight: 500;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 18px; /* Even smaller font for phones */
+    }
+
+
 
         /* Content Section */
         .content {
