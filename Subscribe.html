@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Textbook Web - Affordable Academic Resources</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body 
+        
+        {
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #5b585862;
+        }
+
+        header {
+            background-color: #ffffff19;
+            width: 100%;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.648);
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: 500;
+            color: #333;
+        }
+
+        .about-section {
+            padding: 40px 20px;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+
+        .about-section h2 {
+            font-size: 28px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .about-section p {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        .pricing-container {
+            width: 100%;
+            padding: 40px 20px;
+            background-color: #f1f1f1;
+            text-align: center;
+        }
+
+        .pricing-container h2 {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .pricing-plans {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .pricing-plan {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+
+        .pricing-plan h3 {
+            font-size: 24px;
+            color: #007bff;
+        }
+
+        .pricing-plan .price {
+            font-size: 28px;
+            font-weight: 700;
+            color: #333;
+            margin: 15px 0;
+        }
+
+        .pricing-plan p {
+            font-size: 16px;
+            color: #666;
+        }
+
+        .cancellation-info {
+            font-size: 14px;
+            color: #999;
+            margin-top: 10px;
+        }
+
+        .subscribe-btn {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        .subscribe-btn:hover {
+            background-color: #0056b3;
+        }
+
+        @media (max-width: 768px) {
+            .pricing-plans {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Textbook Web - Affordable Academic Resources</h1>
+    </header>
+
+    <div class="about-section">
+        <h2>Why Textbook Web Was Created</h2>
+        <p>Textbook Web was created with one simple mission: to help students access affordable, high-quality academic resources without breaking the bank. We understand the financial strain that textbooks can put on students—often costing hundreds, even thousands, of rands for books you'll only need for a single semester.</p>
+        <p>Instead of spending up to R1000 or more on a textbook that might just gather dust after the semester ends, Textbook Web offers a more sustainable solution. For as little as R40 a month, you can subscribe to access the textbooks you need, saving you money while ensuring you have the resources required to succeed in your studies.</p>
+        <p>This subscription model means you can spend as little as R200 for all the textbooks you need in a semester—significantly cheaper than buying new or even second-hand books. Textbook Web gives you the freedom to choose the resources that suit your course load, without the heavy financial burden of purchasing physical books.</p>
+        <p>Our platform aims to empower students by offering a vast library of open-access textbooks and expert summaries, ensuring that learning is affordable, convenient, and accessible to everyone. Whether you're a first-year student or a postgraduate scholar, Textbook Web is here to make your academic journey more affordable and efficient.</p>
+    </div>
+
+    <div class="pricing-container">
+        <h2>Choose the plan that suits you:</h2>
+        <div class="pricing-plans">
+            <div class="pricing-plan">
+                <h3>Monthly Plan</h3>
+                <p class="price">R40/month</p>
+                <p>Access to your desired textbook</p>
+                <p class="cancellation-info">Cancel anytime or at the end of the semester when you no longer need the textbook.</p>
+                <button class="subscribe-btn">Subscribe Now</button>
+            </div>
+            <div class="pricing-plan">
+                <h3>Yearly Plan</h3>
+                <p class="price">R480/year</p>
+                <p>Save 20% compared to the monthly plan</p>
+                <p class="cancellation-info">Cancel anytime or at the end of the semester when you no longer need the textbook.</p>
+                <button class="subscribe-btn">Subscribe Now</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
