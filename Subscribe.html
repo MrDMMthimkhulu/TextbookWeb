@@ -12,26 +12,25 @@
             padding: 0;
             font-family: 'Roboto', sans-serif;
             background-color: #f9f9f9;
-            overflow-x: hidden; /* Prevent horizontal scrolling */
             display: flex;
             flex-direction: column;
-            justify-content: flex-start; /* Align to the top */
+            justify-content: flex-start;
             align-items: center;
             height: 100%; /* Full viewport height */
         }
 
         /* Header Styles */
         header {
-            width: 100%; /* Make the header span the full width */
+            width: 100%;
             padding: 20px;
             background-color: #007bff;
             color: white;
             text-align: center;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            position: fixed; /* Fix header at the top */
+            position: fixed;
             top: 0;
             left: 0;
-            z-index: 999; /* Ensure header is always on top */
+            z-index: 999;
         }
 
         header h1 {
@@ -40,13 +39,14 @@
             font-weight: 500;
         }
 
-        /* Padding for content below the fixed header */
+        /* Content Section */
         .content {
-            margin-top: 100px; /* Space for header */
+            margin-top: 80px; /* Space for header */
             width: 100%;
             text-align: center;
         }
 
+        /* About Section */
         .about-section {
             padding: 40px 20px;
             background-color: #f9f9f9;
@@ -69,12 +69,12 @@
 
         /* Pricing Section */
         .pricing-container {
-            width: 80%; /* Make the container 80% of the screen width */
-            max-width: 1000px; /* Limit the max width */
+            width: 80%;
+            max-width: 1000px;
             padding: 40px 20px;
             background-color: #f1f1f1;
             text-align: center;
-            margin: 0 auto; /* Center the container */
+            margin: 20px auto;
         }
 
         .pricing-container h2 {
@@ -140,7 +140,7 @@
             background-color: #0056b3;
         }
 
-        /* Small Screen Specific Styles */
+        /* Phone-specific Styles */
         .pricing-container-small {
             display: none;
         }
@@ -172,18 +172,50 @@
 
         /* Phone Styles (max-width 768px) */
         @media (max-width: 768px) {
+            /* Centering the content for small screens */
+            header, .content, .about-section, .pricing-container {
+                width: 100%;
+                text-align: center;
+            }
+
             .pricing-container {
-                display: block;
+                padding: 30px 15px;
+                margin: 20px auto;
+                width: 90%;
+            }
+
+            .pricing-plans {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+
+            .pricing-plan {
+                width: 100%;
+                max-width: 100%;
+                padding: 20px;
+            }
+
+            .pricing-plan .price {
+                font-size: 24px;
+            }
+
+            .subscribe-btn {
+                padding: 10px 18px;
+            }
+
+            .cancellation-info {
+                font-size: 12px;
             }
 
             .pricing-container-small {
                 display: block;
-                width: 90%; /* Smaller width for small screens */
-                padding: 30px 15px; /* Reduce padding */
+                width: 90%;
                 margin: 20px auto;
-                background-color: #f1f1f1; /* Background for small container */
-                border-radius: 8px; /* Rounded corners */
-                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Slight shadow */
+                padding: 25px;
+                background-color: #f1f1f1;
+                border-radius: 8px;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
             }
 
             .pricing-container-small h2 {
@@ -199,31 +231,6 @@
 
             .pricing-plan {
                 width: 100%;
-                max-width: 100%; /* Make the pricing plan full width */
-                padding: 20px;
-            }
-
-            .pricing-plan .price {
-                font-size: 24px;
-            }
-
-            .subscribe-btn {
-                padding: 10px 18px;
-            }
-
-            .cancellation-info {
-                font-size: 12px;
-            }
-        }
-
-        /* Extra Small Phone Styles (max-width 480px) */
-        @media (max-width: 480px) {
-            .pricing-container-small {
-                width: 85%;
-                padding: 20px 10px;
-            }
-
-            .pricing-plan {
                 padding: 15px;
             }
 
@@ -241,6 +248,34 @@
 
             .cancellation-info {
                 font-size: 10px;
+            }
+        }
+
+        /* Extra Small Phone Styles (max-width 480px) */
+        @media (max-width: 480px) {
+            .pricing-container-small {
+                width: 85%;
+                padding: 20px 10px;
+            }
+
+            .pricing-plan {
+                padding: 10px;
+            }
+
+            .pricing-plan h3 {
+                font-size: 18px;
+            }
+
+            .pricing-plan .price {
+                font-size: 20px;
+            }
+
+            .subscribe-btn {
+                padding: 8px 14px;
+            }
+
+            .cancellation-info {
+                font-size: 8px;
             }
         }
     </style>
