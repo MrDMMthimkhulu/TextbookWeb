@@ -243,6 +243,65 @@ body {
 
 
 
+/* Centering the search container on all devices */
+#search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    width: 60%; /* Default width for larger screens */
+}
+
+/* Styling the search bar */
+#searchBar {
+    width: 100%;
+    max-width: 500px; /* Restricts the max width */
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Responsive Styles for Tablets */
+@media (max-width: 1024px) {
+    #search-container {
+        width: 80%;
+    }
+
+    #searchBar {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+/* Responsive Styles for Mobile */
+@media (max-width: 768px) {
+    #search-container {
+        width: 90%;
+    }
+
+    #searchBar {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+/* Extra Small Devices (e.g., small phones) */
+@media (max-width: 480px) {
+    #search-container {
+        width: 95%;
+    }
+
+    #searchBar {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+
+
     </style>
 </head>
 <body>
