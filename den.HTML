@@ -296,6 +296,60 @@ body {
 }
 
 
+/* Footer Styles */
+footer {
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Footer Text */
+footer p {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+/* Footer Navigation */
+footer nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+footer nav a {
+    color: white;
+    text-decoration: none;
+    margin: 5px 10px; /* Spacing between links */
+    font-size: 14px;
+}
+
+footer nav a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    footer {
+        padding: 15px 10px;
+    }
+
+    footer nav {
+        flex-direction: column; /* Stack links on small screens */
+    }
+
+    footer nav a {
+        margin: 5px 0; /* Add vertical spacing */
+    }
+}
+
+
     </style>
 </head>
 <body>
@@ -574,6 +628,20 @@ body {
     </div>
 
     <script src="script.js"></script>
+
+<footer>
+    <p>&copy; 2025 Textbooks Web | All Rights Reserved</p>
+
+    <nav>
+        <a href="Footer.html" style="color: white; margin-right: 15px">About Us</a>
+        <a href="Footer.html" style="color: white; margin-right: 15px">Terms of Service</a>
+        <a href="Footer.html" style="color: white; margin-right: 15px">Privacy Policy</a>
+        <a href="Footer.html" style="color: white; margin-right: 15px">Products & Services</a>
+        <a href="Footer.html#contact" style="color: white">Contact Us</a>
+    </nav>
+</footer>
+
+
 
     <script>
         function filterSearch() {
