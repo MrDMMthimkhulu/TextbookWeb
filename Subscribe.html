@@ -140,6 +140,11 @@
             background-color: #0056b3;
         }
 
+        /* Small Screen Specific Styles */
+        .pricing-container-small {
+            display: none;
+        }
+
         /* Tablet and Laptop Styles (max-width 1024px) */
         @media (max-width: 1024px) {
             .about-section h2 {
@@ -167,16 +172,15 @@
 
         /* Phone Styles (max-width 768px) */
         @media (max-width: 768px) {
-            header h1 {
-                font-size: 20px;
+            .pricing-container {
+                display: block;
             }
 
-            .about-section h2 {
-                font-size: 24px;
-            }
-
-            .about-section p {
-                font-size: 14px;
+            .pricing-container-small {
+                display: block;
+                width: 90%; /* Smaller width for small screens */
+                padding: 30px 15px; /* Reduce padding */
+                margin: 20px auto;
             }
 
             .pricing-container h2 {
@@ -193,31 +197,7 @@
                 max-width: 330px;
             }
 
-            .cancellation-info {
-                font-size: 12px;
-            }
-        }
-
-        /* Small Phone Styles (max-width 480px) */
-        @media (max-width: 480px) {
-            header h1 {
-                font-size: 18px;
-            }
-
-            .about-section h2 {
-                font-size: 22px;
-            }
-
-            .about-section p {
-                font-size: 12px;
-            }
-
-            .pricing-container {
-                width: 90%; /* Make the pricing container a little smaller on small screens */
-                padding: 30px 15px; /* Reduce padding for smaller screens */
-            }
-
-            .pricing-container h2 {
+            .pricing-container-small h2 {
                 font-size: 22px;
             }
 
@@ -245,32 +225,31 @@
             }
         }
 
-        /* Extra Small Phone Styles (max-width 400px) */
-        @media (max-width: 400px) {
-            .pricing-container {
-                width: 85%; /* Further reduce container width */
-                padding: 20px 10px; /* Reduce padding for smaller screens */
+        /* Extra Small Phone Styles (max-width 480px) */
+        @media (max-width: 480px) {
+            .pricing-container-small {
+                width: 85%;
+                padding: 20px 10px;
             }
 
             .pricing-plan {
-                max-width: 100%; /* Ensure the pricing plan fills the available space */
                 padding: 15px;
             }
 
             .pricing-plan h3 {
-                font-size: 20px; /* Smaller font size for pricing plan title */
+                font-size: 20px;
             }
 
             .pricing-plan .price {
-                font-size: 22px; /* Smaller price font size */
+                font-size: 22px;
             }
 
             .subscribe-btn {
-                padding: 8px 14px; /* Reduce button size for smaller screens */
+                padding: 8px 14px;
             }
 
             .cancellation-info {
-                font-size: 10px; /* Smaller font size for cancellation info */
+                font-size: 10px;
             }
         }
     </style>
@@ -291,6 +270,27 @@
         </div>
 
         <div class="pricing-container">
+            <h2>Choose the plan that suits you:</h2>
+            <div class="pricing-plans">
+                <div class="pricing-plan">
+                    <h3>Monthly Plan</h3>
+                    <p class="price">R40/month</p>
+                    <p>Access to your desired textbook</p>
+                    <p class="cancellation-info">Cancel anytime or at the end of the semester when you no longer need the textbook.</p>
+                    <button class="subscribe-btn">Subscribe Now</button>
+                </div>
+                <div class="pricing-plan">
+                    <h3>Yearly Plan</h3>
+                    <p class="price">R480/year</p>
+                    <p>Save 20% compared to the monthly plan</p>
+                    <p class="cancellation-info">Cancel anytime or at the end of the semester when you no longer need the textbook.</p>
+                    <button class="subscribe-btn">Subscribe Now</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile-Optimized Pricing Container -->
+        <div class="pricing-container-small">
             <h2>Choose the plan that suits you:</h2>
             <div class="pricing-plans">
                 <div class="pricing-plan">
