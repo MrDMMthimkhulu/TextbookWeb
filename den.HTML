@@ -167,6 +167,75 @@
 
 /* End of reviews section styles */
 
+body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+           
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+        }
+        .intro-text {
+            text-align: center;
+            padding: 40px;
+            font-size: 1.2em;
+            background-color: white;
+            max-width: 800px;
+            margin: 20px auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(2, 0, 0, 0.733);
+        }
+
+
+        .subscription {
+    text-align: center;
+    padding: 40px;
+    background-color: #e9f7e9;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+.subscription h2 {
+    font-size: 2em;
+    color: #4CAF50;
+}
+
+.subscription p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+.subscription ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: 1.1em;
+}
+
+.subscription .button {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 1.2em;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.subscription .button:hover {
+    background-color: #45a049;
+}
+
+
+
     </style>
 </head>
 <body>
@@ -176,6 +245,21 @@
     <div id="search-container">
         <input type="text" id="searchBar" onkeyup="filterSearch()" placeholder="Search for textbooks...">
     </div>
+
+    <div class="intro-text">
+        <p>Welcome to Book Web — Your Ultimate Destination for Quality Textbooks and Study Resources.</p>
+        <p>Whether you're looking for affordable academic materials or expert summaries to enhance your learning, we’ve got you covered. Explore, subscribe, and excel with the resources you need to succeed academically!</p>
+    </div>
+
+    <div class="subscription">
+        <h2>Subscribe for Full Access</h2>
+        <p>Get unlimited access to all textbooks. Click below for more information.</p>
+        
+
+        <a href="More info.html" class="button">MORE INFO</a>
+    </div>
+
+
     <div class="grid-container" id="itemList">
         <div class="book-item"><img src="1.png" alt="Psychopathology"><p>Psychopathology: An Integrative Approach to Mental Disorders | 9th Edition</p><button class="subscribe-btn">Subscribe</button></div>
         <div class="book-item"><img src="2.png" alt="Financial Accounting"><p>Fundamentals of Financial Accounting 5th Ed</p><button class="subscribe-btn">Subscribe</button></div>
