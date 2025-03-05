@@ -13,20 +13,38 @@
             font-family: 'Roboto', sans-serif;
             background-color: #f9f9f9;
             overflow-x: hidden; /* Prevent horizontal scrolling */
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start; /* Align to the top */
+            align-items: center;
+            height: 100%; /* Full viewport height */
         }
 
+        /* Header Styles */
         header {
-            background-color: #fff;
+            width: 100%; /* Make the header span the full width */
             padding: 20px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            background-color: #007bff;
+            color: white;
             text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: fixed; /* Fix header at the top */
+            top: 0;
+            left: 0;
+            z-index: 999; /* Ensure header is always on top */
         }
 
         header h1 {
             margin: 0;
             font-size: 24px;
             font-weight: 500;
-            color: #333;
+        }
+
+        /* Padding for content below the fixed header */
+        .content {
+            margin-top: 100px; /* Space for header */
+            width: 100%;
+            text-align: center;
         }
 
         .about-section {
@@ -122,7 +140,7 @@
             background-color: #0056b3;
         }
 
-        /* Responsive Styles */
+        /* Tablet and Laptop Styles (max-width 1024px) */
         @media (max-width: 1024px) {
             .about-section h2 {
                 font-size: 26px;
@@ -136,11 +154,18 @@
                 font-size: 26px;
             }
 
+            .pricing-plans {
+                flex-direction: column;
+                align-items: center;
+            }
+
             .pricing-plan {
                 width: 90%;
+                max-width: 330px;
             }
         }
 
+        /* Phone Styles (max-width 768px) */
         @media (max-width: 768px) {
             header h1 {
                 font-size: 20px;
@@ -173,6 +198,7 @@
             }
         }
 
+        /* Small Phone Styles (max-width 480px) */
         @media (max-width: 480px) {
             header h1 {
                 font-size: 18px;
@@ -195,9 +221,14 @@
                 font-size: 22px;
             }
 
+            .pricing-plans {
+                flex-direction: column;
+                gap: 15px;
+            }
+
             .pricing-plan {
                 width: 100%;
-                max-width: 100%;
+                max-width: 100%; /* Make the pricing plan full width */
                 padding: 20px;
             }
 
@@ -213,6 +244,35 @@
                 font-size: 12px;
             }
         }
+
+        /* Extra Small Phone Styles (max-width 400px) */
+        @media (max-width: 400px) {
+            .pricing-container {
+                width: 85%; /* Further reduce container width */
+                padding: 20px 10px; /* Reduce padding for smaller screens */
+            }
+
+            .pricing-plan {
+                max-width: 100%; /* Ensure the pricing plan fills the available space */
+                padding: 15px;
+            }
+
+            .pricing-plan h3 {
+                font-size: 20px; /* Smaller font size for pricing plan title */
+            }
+
+            .pricing-plan .price {
+                font-size: 22px; /* Smaller price font size */
+            }
+
+            .subscribe-btn {
+                padding: 8px 14px; /* Reduce button size for smaller screens */
+            }
+
+            .cancellation-info {
+                font-size: 10px; /* Smaller font size for cancellation info */
+            }
+        }
     </style>
 </head>
 <body>
@@ -221,30 +281,32 @@
         <h1>Textbook Web - Affordable Academic Resources</h1>
     </header>
 
-    <div class="about-section">
-        <h2>Why Textbook Web Was Created</h2>
-        <p>Textbook Web was created with one simple mission: to help students access affordable, high-quality academic resources without breaking the bank. We understand the financial strain that textbooks can put on students—often costing hundreds, even thousands, of rands for books you'll only need for a single semester.</p>
-        <p>Instead of spending up to R1000 or more on a textbook that might just gather dust after the semester ends, Textbook Web offers a more sustainable solution. For as little as R40 a month, you can subscribe to access the textbooks you need, saving you money while ensuring you have the resources required to succeed in your studies.</p>
-        <p>This subscription model means you can spend as little as R200 for all the textbooks you need in a semester—significantly cheaper than buying new or even second-hand books. Textbook Web gives you the freedom to choose the resources that suit your course load, without the heavy financial burden of purchasing physical books.</p>
-        <p>Our platform aims to empower students by offering a vast library of open-access textbooks and expert summaries, ensuring that learning is affordable, convenient, and accessible to everyone. Whether you're a first-year student or a postgraduate scholar, Textbook Web is here to make your academic journey more affordable and efficient.</p>
-    </div>
+    <div class="content">
+        <div class="about-section">
+            <h2>Why Textbook Web Was Created</h2>
+            <p>Textbook Web was created with one simple mission: to help students access affordable, high-quality academic resources without breaking the bank. We understand the financial strain that textbooks can put on students—often costing hundreds, even thousands, of rands for books you'll only need for a single semester.</p>
+            <p>Instead of spending up to R1000 or more on a textbook that might just gather dust after the semester ends, Textbook Web offers a more sustainable solution. For as little as R40 a month, you can subscribe to access the textbooks you need, saving you money while ensuring you have the resources required to succeed in your studies.</p>
+            <p>This subscription model means you can spend as little as R200 for all the textbooks you need in a semester—significantly cheaper than buying new or even second-hand books. Textbook Web gives you the freedom to choose the resources that suit your course load, without the heavy financial burden of purchasing physical books.</p>
+            <p>Our platform aims to empower students by offering a vast library of open-access textbooks and expert summaries, ensuring that learning is affordable, convenient, and accessible to everyone. Whether you're a first-year student or a postgraduate scholar, Textbook Web is here to make your academic journey more affordable and efficient.</p>
+        </div>
 
-    <div class="pricing-container">
-        <h2>Choose the plan that suits you:</h2>
-        <div class="pricing-plans">
-            <div class="pricing-plan">
-                <h3>Monthly Plan</h3>
-                <p class="price">R40/month</p>
-                <p>Access to your desired textbook</p>
-                <p class="cancellation-info">Cancel anytime or at the end of the semester when you no longer need the textbook.</p>
-                <button class="subscribe-btn">Subscribe Now</button>
-            </div>
-            <div class="pricing-plan">
-                <h3>Yearly Plan</h3>
-                <p class="price">R480/year</p>
-                <p>Save 20% compared to the monthly plan</p>
-                <p class="cancellation-info">Cancel anytime or at the end of the semester when you no longer need the textbook.</p>
-                <button class="subscribe-btn">Subscribe Now</button>
+        <div class="pricing-container">
+            <h2>Choose the plan that suits you:</h2>
+            <div class="pricing-plans">
+                <div class="pricing-plan">
+                    <h3>Monthly Plan</h3>
+                    <p class="price">R40/month</p>
+                    <p>Access to your desired textbook</p>
+                    <p class="cancellation-info">Cancel anytime or at the end of the semester when you no longer need the textbook.</p>
+                    <button class="subscribe-btn">Subscribe Now</button>
+                </div>
+                <div class="pricing-plan">
+                    <h3>Yearly Plan</h3>
+                    <p class="price">R480/year</p>
+                    <p>Save 20% compared to the monthly plan</p>
+                    <p class="cancellation-info">Cancel anytime or at the end of the semester when you no longer need the textbook.</p>
+                    <button class="subscribe-btn">Subscribe Now</button>
+                </div>
             </div>
         </div>
     </div>
