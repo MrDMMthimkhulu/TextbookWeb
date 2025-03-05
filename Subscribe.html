@@ -1,14 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<head>
     <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Textbook Web - Affordable Academic Resources</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-
     <style>
         /* Global Styles */
         html, body {
@@ -16,101 +12,59 @@
             padding: 0;
             font-family: 'Roboto', sans-serif;
             background-color: #f9f9f9;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: center;
-            height: 100%; /* Full viewport height */
+            overflow-x: hidden;
+            width: 100%;
         }
 
         /* Header Styles */
-/* Header Styles */
-header {
-    width: 100%;
-    padding: 15px 10px; /* Reduce padding for smaller screens */
-    background-color: #000000;
-    color: white;
-    text-align: center;
-    box-shadow: 0 2px 4px rgb(0, 0, 0);
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 999;
-}
+        header {
+            width: 100%;
+            padding: 15px 10px;
+            background-color: #000;
+            color: white;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 999;
+        }
 
-/* Header Title */
-header h1 {
-    margin: 0;
-    font-size: 20px; /* Smaller font for mobile */
-    font-weight: 500;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 18px; /* Even smaller font for phones */
-    }
-
-
+        header h1 {
+            margin: 0;
+            font-size: 20px;
+            font-weight: 500;
+        }
 
         /* Content Section */
         .content {
-            margin-top: 80px; /* Space for header */
+            margin-top: 80px;
             width: 100%;
             text-align: center;
         }
 
-html, body {
-    overflow-x: hidden;
-    width: 100%;
-}
+        /* About Section */
+        .about-section {
+            width: 90%;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
 
-    
- .content, .about-section, .pricing-container {
-    max-width: 100%;
-    overflow: hidden;
-}   
-    
-    /* About Section */
-.about-section {
-    width: 90%; /* Makes it responsive */
-    max-width: 600px; /* Prevents it from becoming too wide on larger screens */
-    margin: 0 auto; /* Centers it horizontally */
-    padding: 40px 20px;
-    background-color: #f9f9f9;
-    text-align: center;
-}
+        .about-section h2 {
+            font-size: 26px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 20px;
+        }
 
-.about-section h2 {
-    font-size: 26px;
-    font-weight: 600;
-    color: #333;
-    margin-bottom: 20px;
-}
-
-.about-section p {
-    font-size: 16px;
-    color: #666;
-    line-height: 1.6;
-    margin-bottom: 10px;
-}
-
-/* Mobile-specific adjustments */
-@media (max-width: 768px) {
-    .about-section {
-        width: 95%; /* Slightly narrower for small screens */
-        padding: 30px 15px;
-    }
-
-    .about-section h2 {
-        font-size: 24px;
-    }
-
-    .about-section p {
-        font-size: 14px;
-    }
-}
-
+        .about-section p {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.6;
+        }
 
         /* Pricing Section */
         .pricing-container {
@@ -125,16 +79,15 @@ html, body {
         .pricing-container h2 {
             font-size: 28px;
             font-weight: 600;
-            margin-bottom: 20px;
             color: #333;
         }
 
-.pricing-plans {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
-}
+        .pricing-plans {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 100%;
+        }
 
         .pricing-plan {
             background-color: #fff;
@@ -156,18 +109,6 @@ html, body {
             font-size: 28px;
             font-weight: 700;
             color: #333;
-            margin: 15px 0;
-        }
-
-        .pricing-plan p {
-            font-size: 16px;
-            color: #666;
-        }
-
-        .cancellation-info {
-            font-size: 14px;
-            color: #999;
-            margin-top: 10px;
         }
 
         .subscribe-btn {
@@ -184,23 +125,24 @@ html, body {
             background-color: #0056b3;
         }
 
-        /* Phone-specific Styles */
-        .pricing-container-small {
-            display: none;
-        }
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 18px;
+            }
 
-        /* Tablet and Laptop Styles (max-width 1024px) */
-        @media (max-width: 1024px) {
+            .about-section {
+                width: 95%;
+                padding: 30px 15px;
+            }
+
             .about-section h2 {
-                font-size: 26px;
+                font-size: 24px;
             }
 
-            .about-section p {
-                font-size: 14px;
-            }
-
-            .pricing-container h2 {
-                font-size: 26px;
+            .pricing-container {
+                width: 90%;
+                padding: 30px 15px;
             }
 
             .pricing-plans {
@@ -211,121 +153,23 @@ html, body {
             .pricing-plan {
                 width: 90%;
                 max-width: 330px;
-            }
-        }
-
-        /* Phone Styles (max-width 768px) */
-        @media (max-width: 768px) {
-            /* Centering the content for small screens */
-            header, .content, .about-section, .pricing-container {
-                width: 100%;
-                text-align: center;
-            }
-
-            .pricing-container {
-                padding: 30px 15px;
-                margin: 20px auto;
-                width: 90%;
-            }
-
-            .pricing-plans {
-                flex-direction: column;
-                align-items: center;
-                gap: 15px;
-            }
-
-            .pricing-plan {
-                width: 100%;
-                max-width: 100%;
                 padding: 20px;
             }
-
-            .pricing-plan .price {
-                font-size: 24px;
-            }
-
-            .subscribe-btn {
-                padding: 10px 18px;
-            }
-
-            .cancellation-info {
-                font-size: 12px;
-            }
-
-            .pricing-container-small {
-                display: block;
-                width: 90%;
-                margin: 20px auto;
-                padding: 25px;
-                background-color: #f1f1f1;
-                border-radius: 8px;
-                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-            }
-
-            .pricing-container-small h2 {
-                font-size: 22px;
-                margin-bottom: 15px;
-            }
-
-            .pricing-plans {
-                flex-direction: column;
-                align-items: center;
-                gap: 15px;
-            }
-
-            .pricing-plan {
-                width: 100%;
-                padding: 15px;
-            }
-
-            .pricing-plan h3 {
-                font-size: 20px;
-            }
-
-            .pricing-plan .price {
-                font-size: 22px;
-            }
-
-            .subscribe-btn {
-                padding: 8px 14px;
-            }
-
-            .cancellation-info {
-                font-size: 10px;
-            }
         }
 
-        /* Extra Small Phone Styles (max-width 480px) */
         @media (max-width: 480px) {
-            .pricing-container-small {
-                width: 85%;
-                padding: 20px 10px;
-            }
-
-            .pricing-plan {
-                padding: 10px;
-            }
-
             .pricing-plan h3 {
-                font-size: 18px;
+                font-size: 20px;
             }
 
             .pricing-plan .price {
-                font-size: 20px;
+                font-size: 22px;
             }
 
             .subscribe-btn {
                 padding: 8px 14px;
             }
-
-            .cancellation-info {
-                font-size: 8px;
-            }
         }
-
-input, textarea, select, button {
-    font-size: 16px;
-}
 
 
         
